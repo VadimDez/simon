@@ -1,0 +1,20 @@
+{
+  "name": "simon_game",
+  "homepage": "https://github.com/VadimDez/simon",
+  "authors": [
+    "Vadym Yatsyuk <vasp3d@gmail.com>"
+  ],
+  "description": "simon game",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "js"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.6",
+    "angular-audio": "~1.7.1"
+  }
+}

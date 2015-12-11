@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simon game</title>
+    <script src="components/angular/angular.min.js"></script>
+    <script src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="components/angular-audio/app/angular.audio.js" type="text/javascript" language="javascript"></script>
+    <!--<link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="simon">
+    <div class="container">
+        <div ui-view></div>
+    </div>
+
+<script type="text/ng-template" id="home.html">
+    <div class="circle">
+        <div class="buttons">
+            <button class="btn red" ng-class="{'active': game.activeColor === 'red'}" ng-mousedown="press('red')" ng-mouseup="release('red')"></button>
+            <button class="btn green" ng-class="{'active': game.activeColor === 'green'}" ng-mousedown="press('green')" ng-mouseup="release('green')"></button>
+            <button class="btn yellow" ng-class="{'active': game.activeColor === 'yellow'}" ng-mousedown="press('yellow')" ng-mouseup="release('yellow')"></button>
+            <button class="btn blue" ng-class="{'active': game.activeColor === 'blue'}" ng-mousedown="press('blue')" ng-mouseup="release('blue')"></button>
+        </div>
+        <div class="menu">
+            <div>
+                <div class="steps">
+                    <p>{{ steps }}</p>
+                    Steps
+                </div>
+                <div class="actions">
+                    <button ng-click="start()" class="btn start">Start</button>
+                    <button ng-click="toggleStrict()" class="btn strict" ng-class="{'active': isStrictMode}">Strict</button>
+                </div>
+                <p class="name">Simon</p>
+            </div>
+        </div>
+    </div>
+</script>
+</body>
+</html>
